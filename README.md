@@ -1,5 +1,5 @@
 # leetcode
-leetcode notes
+一刷leetcode
 
 ## April 10
 * Single Number
