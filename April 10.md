@@ -1,4 +1,4 @@
-### Single Number(easy)
+### 136. Single Number
 #### 题目描述
 Given an array of integers, every element appears twice except for one. Find that single one.
 Note:
