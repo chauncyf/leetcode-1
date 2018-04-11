@@ -54,8 +54,8 @@ Note:
 ``` java
     public int numJewelsInStones(String J, String S) {
         
-	      char[] jlist = J.toCharArray();
-		    char[] slist = S.toCharArray();
+	    char[] jlist = J.toCharArray();
+		char[] slist = S.toCharArray();
         int result = 0;
         
         for(int i = 0; i < slist.length; i++){
@@ -75,13 +75,13 @@ Note:
         
         int result = 0;
         Set Jset = new HashSet();
-		    char[] jlist = J.toCharArray();
+		char[] jlist = J.toCharArray();
         
         for(int i = 0; i < jlist.length; i ++){
             Jset.add(jlist[i]);
         }
         
-		    char[] slist = S.toCharArray();
+		char[] slist = S.toCharArray();
         for(int j = 0; j < slist.length; j ++){
             if(Jset.contains(slist[j])) result++;
         }
@@ -108,7 +108,7 @@ Both of you are very clever and have optimal strategies for the game. Write a fu
 For example, if there are 4 stones in the heap, then you will never win the game: no matter 1, 2, or 3 stones you remove, the last stone will always be removed by your friend.
 
 #### 我的思路
-首先，所有4的倍数都不可以；对方完全可以每次都拿（4-我拿的石头数）；剩下的所有数字都可以用`4n+1``4n+2``4n+3`来表示（`n为自然数`），要么我可以一次拿光，要么我可以拿掉1～3个后，让剩下的数额是4的倍数，这样对方必输无疑。因此我的答案是：
+首先，所有4的倍数都不可以；对方完全可以每次都拿（4-我拿的石头数）；剩下的所有数字都可以用`4n+1`、`4n+2`、`4n+3`来表示（`n为自然数`），要么我可以一次拿光，要么我可以拿掉1～3个后，让剩下的数额是4的倍数，这样对方必输无疑。因此我的答案是：
 
 ``` java
 public boolean canWinNim(int n) {
