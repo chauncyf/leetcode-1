@@ -16,13 +16,14 @@ Union Find I
 * Friend Circles
 
 ## April 13
-*
+* Detect Capital
 
 ## April 14
-* Swim in Rising Water
-* Longest Consecutive Sequence    
+Union Find II
 * Redundant Connection
 * Couples Holding Hands
+* Swim in Rising Water
+* Longest Consecutive Sequence    
 
 ## April 15
 * 
