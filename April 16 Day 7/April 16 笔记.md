@@ -35,7 +35,8 @@ Every integer represented in the 2D-array will be between 1 and N, where N is th
 
 ```
 
-### 765. Couples Holding Hands
+
+### 128. Longest Consecutive Sequence
 #### 题目描述
 Design and implement a TwoSum class. It should support the following operations:add and find.
 
@@ -46,76 +47,13 @@ For example,
 add(1); add(3); add(5);
 find(4) -> true
 find(7) -> false
-
-#### 我的思路
-
-
-``` java
-
-``` 
-#### 讨论区
-因为没有付费所以看不到啦～等付费了再回去看看补充。
-
-
-### 684. Redundant Connection
-#### 题目描述
-
-In this problem, a tree is an undirected graph that is connected and has no cycles.
-
-The given input is a graph that started as a tree with N nodes (with distinct values 1, 2, ..., N), with one additional edge added. The added edge has two different vertices chosen from 1 to N, and was not an edge that already existed.
-
-The resulting graph is given as a 2D-array of edges. Each element of edges is a pair [u, v] with u < v, that represents an undirected edge connecting nodes u and v.
-
-Return an edge that can be removed so that the resulting graph is a tree of N nodes. If there are multiple answers, return the answer that occurs last in the given 2D-array. The answer edge [u, v] should be in the same format, with u < v.
-
-Example 1:
-Input: `[[1,2], [1,3], [2,3]]`
-Output: `[2,3]`
-Explanation: The given undirected graph will be like this:
-  1
- / \
-2 - 3
-Example 2:
-Input: `[[1,2], [2,3], [3,4], [1,4], [1,5]]`
-Output: `[1,4]`
-Explanation: The given undirected graph will be like this:
-`5 - 1 - 2
-     |   |
-     4 - 3
-`
-Note:
-The size of the input 2D-array will be between 3 and 1000.
-Every integer represented in the 2D-array will be between 1 and N, where N is the size of the input array.
-
 
 #### 思路
 
-``` java
-
-```
-
-### 765. Couples Holding Hands
-#### 题目描述
-Design and implement a TwoSum class. It should support the following operations:add and find.
-
-add - Add the number to an internal data structure.
-find - Find if there exists any pair of numbers which sum is equal to the value.
-
-For example,
-add(1); add(3); add(5);
-find(4) -> true
-find(7) -> false
-
-#### 我的思路
-
 
 ``` java
 
 ``` 
-#### 讨论区
-因为没有付费所以看不到啦～等付费了再回去看看补充。
-
-
 ### 778. Swim in Rising Water
 #### 题目描述
 
@@ -158,23 +96,3 @@ grid[i][j] is a permutation of [0, ..., NN - 1].
 ``` java
 
 ```
-
-### 128. Longest Consecutive Sequence
-#### 题目描述
-Design and implement a TwoSum class. It should support the following operations:add and find.
-
-add - Add the number to an internal data structure.
-find - Find if there exists any pair of numbers which sum is equal to the value.
-
-For example,
-add(1); add(3); add(5);
-find(4) -> true
-find(7) -> false
-
-#### 思路
-
-
-``` java
-
-``` 
-

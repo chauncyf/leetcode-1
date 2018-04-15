@@ -2,7 +2,7 @@
 一刷leetcode
 
 ## April 10
-* Single Number
+* Single Number (Bit Manipulation)
 * Jewels and Stones
 * Nim Game
 
@@ -12,20 +12,24 @@
 * Two Sum III - Data structure design
 
 ## April 12
-Union Find I
-* Friend Circles
+* Friend Circles(Union Find)
 
 ## April 13
 * Detect Capital
 
 ## April 14
-Union Find II
-* Redundant Connection
-* Couples Holding Hands
-* Swim in Rising Water
-* Longest Consecutive Sequence    
+有事停一天
+
 
 ## April 15
-* 
-*
+* Single Number II (Bit Manipulation)
+* Single Number III (Bit Manipulation)
+* Couples Holding Hands(Union Find)
+* Power of Two
 
+
+## April 16
+计划
+* Redundant Connection
+* Swim in Rising Water
+* Longest Consecutive Sequence    
