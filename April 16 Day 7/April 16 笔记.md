@@ -1,98 +1,68 @@
-### 684. Redundant Connection
+### 326. Power of Three
 #### 题目描述
 
-In this problem, a tree is an undirected graph that is connected and has no cycles.
+Given an integer, write a function to determine if it is a power of three.
 
-The given input is a graph that started as a tree with N nodes (with distinct values 1, 2, ..., N), with one additional edge added. The added edge has two different vertices chosen from 1 to N, and was not an edge that already existed.
-
-The resulting graph is given as a 2D-array of edges. Each element of edges is a pair [u, v] with u < v, that represents an undirected edge connecting nodes u and v.
-
-Return an edge that can be removed so that the resulting graph is a tree of N nodes. If there are multiple answers, return the answer that occurs last in the given 2D-array. The answer edge [u, v] should be in the same format, with u < v.
-
-Example 1:
-Input: `[[1,2], [1,3], [2,3]]`
-Output: `[2,3]`
-Explanation: The given undirected graph will be like this:
-  1
- / \
-2 - 3
-Example 2:
-Input: `[[1,2], [2,3], [3,4], [1,4], [1,5]]`
-Output: `[1,4]`
-Explanation: The given undirected graph will be like this:
-`5 - 1 - 2
-     |   |
-     4 - 3
-`
-Note:
-The size of the input 2D-array will be between 3 and 1000.
-Every integer represented in the 2D-array will be between 1 and N, where N is the size of the input array.
-
+Follow up:
+Could you do it without using any loop / recursion?
 
 #### 思路
 
-``` java
+法一：循环
+```java
+
+    public boolean isPowerOfThree(int n) {
+        while(n%3==0 && n!=0){
+            n = n/3;
+        }
+        if(n == 1) return true;
+        return false;
+    }
 
 ```
 
-
-### 128. Longest Consecutive Sequence
-#### 题目描述
-Design and implement a TwoSum class. It should support the following operations:add and find.
-
-add - Add the number to an internal data structure.
-find - Find if there exists any pair of numbers which sum is equal to the value.
-
-For example,
-add(1); add(3); add(5);
-find(4) -> true
-find(7) -> false
-
-#### 思路
-
-
-``` java
-
-``` 
-### 778. Swim in Rising Water
-#### 题目描述
-
-On an N x N grid, each square grid[i][j] represents the elevation at that point (i,j).
-
-Now rain starts to fall. At time t, the depth of the water everywhere is t. You can swim from a square to another 4-directionally adjacent square if and only if the elevation of both squares individually are at most t. You can swim infinite distance in zero time. Of course, you must stay within the boundaries of the grid during your swim.
-
-You start at the top left square (0, 0). What is the least time until you can reach the bottom right square (N-1, N-1)?
-
-Example 1:
-
-Input: [[0,2],[1,3]]
-Output: 3
-Explanation:
-At time 0, you are in grid location (0, 0).
-You cannot go anywhere else because 4-directionally adjacent neighbors have a higher elevation than t = 0.
-
-You cannot reach point (1, 1) until time 3.
-When the depth of water is 3, we can swim anywhere inside the grid.
-Example 2:
-
-Input: [[0,1,2,3,4],[24,23,22,21,5],[12,13,14,15,16],[11,17,18,19,20],[10,9,8,7,6]]
-Output: 16
-Explanation:
- 0  1  2  3  4
-24 23 22 21  5
-12 13 14 15 16
-11 17 18 19 20
-10  9  8  7  6
-
-The final route is marked in bold.
-We need to wait until time 16 so that (0, 0) and (4, 4) are connected.
-Note:
-
-2 <= N <= 50.
-grid[i][j] is a permutation of [0, ..., NN - 1].
-
-#### 思路
-
-``` java
-
+法二：递归
+```java
+	public boolean isPowerOfThree(int n) {
+        return n>0 &&  (n==1 || (n%3==0 && isPowerOfThree(n/3)));
+    }
 ```
+
+法三：既不是循环，也不是递归
+log3(n)是整数,log3(n) = logn/log3
+```java
+    public boolean isPowerOfThree(int n) {
+        return (Math.log(n)/Math.log(3)) == Math.round(Math.log(n)/Math.log(3));
+    }
+```
+但是报了错，243被漏掉了，应该是因为log3的数值都是近似值的缘故...看了评论区的解答，貌似把自然底数改掉就可以了，比如下面这个就能正常通过测试：
+```java
+	public boolean isPowerOfThree(int n) {
+        return (Math.log10(n)/Math.log10(3))%1==0;
+    }
+```
+法四：评论区看到的，一个简直是作弊的方法：
+```java
+public boolean isPowerOfThree(int n) {
+	//int最大为：2147483647；1162261467 是 3^19,  3^20 就比int大了。  
+    return n > 0 && (1162261467 % n == 0);
+}
+```
+
+### 202. Happy Number
+#### 题目描述
+
+Write an algorithm to determine if a number is "happy".
+
+A happy number is a number defined by the following process: Starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1. Those numbers for which this process ends in 1 are happy numbers.
+
+Example: 19 is a happy number
+
+1^2 + 9^2 = 82
+8^2 + 2^2 = 68
+6^2 + 8^2 = 100
+1^2 + 0^2 + 0^2 = 1
+
+#### 思路
+
+happy number一定可以变成1000...这样的数字。
