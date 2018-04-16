@@ -65,4 +65,60 @@ Example: 19 is a happy number
 
 #### 思路
 
-happy number一定可以变成1000...这样的数字。
+可以使用hashset，如果现有的和无法加入hashset则说明原来的hashset中已经有了这个数字，之后只会永无休止的循环；如果现有的和是1，则该数字是happy number
+
+```java
+	public boolean isHappy(int n) {
+        Set<Integer> loop = new HashSet<>();
+        int squareSum;
+        int remain;
+        while(loop.add(n)){
+            squareSum = 0;
+            while(n>0){
+//              计算所有digits的总和
+                remain = n%10;
+                squareSum = squareSum + remain*remain;
+                n = n/10;
+            }
+//             如果总和为1，return true
+            if(squareSum == 1) 
+                return true;
+//             否则另n=总和
+            else 
+                n = squareSum;
+        }
+        return false;
+    }
+```
+
+### 202. Plus One
+#### 题目描述
+Given a non-negative integer represented as a non-empty array of digits, plus one to the integer.
+
+You may assume the integer do not contain any leading zero, except the number 0 itself.
+
+The digits are stored such that the most significant digit is at the head of the list.
+
+#### 思路
+说实话我没看懂题目...讨论区有人给了比较详尽的解释：
+[1, 2, 3, 4] represents integer 1234, add one to 1234(the length of array not changed), you get 1235. but [9, 9, 9, 9] represents 9999, add one to 9999, you get 10000(the length of array changed)
+
+分两种情况：一种是加了位数不变；另一种是加了之后多一位：
+
+```java
+	public int[] plusOne(int[] digits) {
+
+        int[] result;
+        for(int i = digits.length-1; i >= 0; i--){
+            if(digits[i] < 9) {
+                digits[i]++;
+                return digits;
+            }
+            digits[i] = 0;
+        }
+        result = new int[n+1];
+        result[0] = 1
+        return result;
+        
+    }
+```

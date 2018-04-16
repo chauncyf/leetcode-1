@@ -27,8 +27,12 @@
 * Couples Holding Hands(Union Find)
 * Power of Two
 
-
 ## April 16
+* Power of Three
+* Happy Number
+* Plus One
+
+## April 17
 计划
 * Redundant Connection
 * Swim in Rising Water
