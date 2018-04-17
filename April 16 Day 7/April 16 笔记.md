@@ -27,7 +27,7 @@ Could you do it without using any loop / recursion?
 	public boolean isPowerOfThree(int n) {
         return n>0 &&  (n==1 || (n%3==0 && isPowerOfThree(n/3)));
     }
-    
+
 ```
 
 法三：既不是循环，也不是递归
@@ -76,6 +76,7 @@ Example: 19 is a happy number
 可以使用hashset，如果现有的和无法加入hashset则说明原来的hashset中已经有了这个数字，之后只会永无休止的循环；如果现有的和是1，则该数字是happy number
 
 ```java
+
 	public boolean isHappy(int n) {
         Set<Integer> loop = new HashSet<>();
         int squareSum;
@@ -97,6 +98,7 @@ Example: 19 is a happy number
         }
         return false;
     }
+
 ```
 
 ### 202. Plus One
@@ -114,6 +116,7 @@ The digits are stored such that the most significant digit is at the head of the
 分两种情况：一种是加了位数不变；另一种是加了之后多一位：
 
 ```java
+
 	public int[] plusOne(int[] digits) {
 
         int[] result;
@@ -129,4 +132,5 @@ The digits are stored such that the most significant digit is at the head of the
         return result;
         
     }
+    
 ```
