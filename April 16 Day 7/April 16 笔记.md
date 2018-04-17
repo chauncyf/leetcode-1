@@ -23,30 +23,38 @@ Could you do it without using any loop / recursion?
 
 法二：递归
 ```java
+
 	public boolean isPowerOfThree(int n) {
         return n>0 &&  (n==1 || (n%3==0 && isPowerOfThree(n/3)));
     }
+    
 ```
 
 法三：既不是循环，也不是递归
 log3(n)是整数,log3(n) = logn/log3
 ```java
+
     public boolean isPowerOfThree(int n) {
         return (Math.log(n)/Math.log(3)) == Math.round(Math.log(n)/Math.log(3));
     }
+
 ```
 但是报了错，243被漏掉了，应该是因为log3的数值都是近似值的缘故...看了评论区的解答，貌似把自然底数改掉就可以了，比如下面这个就能正常通过测试：
 ```java
+
 	public boolean isPowerOfThree(int n) {
         return (Math.log10(n)/Math.log10(3))%1==0;
     }
+
 ```
 法四：评论区看到的，一个简直是作弊的方法：
 ```java
-public boolean isPowerOfThree(int n) {
-	//int最大为：2147483647；1162261467 是 3^19,  3^20 就比int大了。  
-    return n > 0 && (1162261467 % n == 0);
-}
+
+    public boolean isPowerOfThree(int n) {
+    	//int最大为：2147483647；1162261467 是 3^19,  3^20 就比int大了。  
+        return n > 0 && (1162261467 % n == 0);
+    }
+
 ```
 
 ### 202. Happy Number

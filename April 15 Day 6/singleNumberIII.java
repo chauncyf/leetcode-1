@@ -1,4 +1,4 @@
-class Solution {
+class singleNumberIII {
 
     public int[] singleNumber(int[] nums) {
         

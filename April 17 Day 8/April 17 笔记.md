@@ -96,3 +96,31 @@ grid[i][j] is a permutation of [0, ..., NN - 1].
 ``` java
 
 ```
+
+
+### 217. Contains Duplicate
+#### 题目描述
+Given an array of integers, find if the array contains any duplicates. Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.
+#### 思路
+可以用hashset哇
+```java
+    public boolean containsDuplicate(int[] nums) {
+        Set<Integer> set = new HashSet<>();
+        for(int i = 0; i < nums.length; i++){
+            if(!set.add(nums[i])) 
+                  return true;
+        }
+        return false;
+    }
+```
+看评论区还有全部加入hashset后比较长度的，也行的。
+
+### 219. Contains Duplicate II
+#### 题目描述
+Given an array of integers and an integer k, find out whether there are two distinct indices i and j in the array such that nums[i] = nums[j] and the absolute difference between i and j is at most k.
+#### 思路
+
+### 220. Contains Duplicate III
+#### 题目描述
+Given an array of integers, find out whether there are two distinct indices i and j in the array such that the absolute difference between nums[i] and nums[j] is at most t and the absolute difference between i and j is at most k.
+#### 思路
