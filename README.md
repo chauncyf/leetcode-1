@@ -34,6 +34,10 @@
 
 ## April 17
 计划
+* Contains Duplicate
+* Contains DuplicateII
+* Contains DuplicateIII
+
 * Redundant Connection
 * Swim in Rising Water
 * Longest Consecutive Sequence    
