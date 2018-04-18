@@ -33,11 +33,15 @@
 * Plus One
 
 ## April 17
-计划
 * Contains Duplicate
 * Contains DuplicateII
 * Contains DuplicateIII
 
-* Redundant Connection
+## April 18
+* Redundant Connection(Union Find)
+* Reverse Integer
+* Number of Connected Components in an Undirected Graph(Union Find) 
+
+## April 19
+* Longest Consecutive Sequence
 * Swim in Rising Water
-* Longest Consecutive Sequence    
