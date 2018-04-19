@@ -42,6 +42,11 @@
 * Reverse Integer
 * Number of Connected Components in an Undirected Graph(Union Find) 
 
-## April 19
+## April 18
+* Delete Node in a Linked List
+* Reverse Linked List
+* Merge Two Sorted Lists
+
+## April 20
 * Longest Consecutive Sequence
 * Swim in Rising Water
