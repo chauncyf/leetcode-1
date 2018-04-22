@@ -51,5 +51,10 @@
 * Linked List Cycle
 
 ## April 21
-* Longest Consecutive Sequence
-* Swim in Rising Water
+* Linked List Components
+* Remove Duplicates from Sorted List
+
+## April 22
+* Remove Linked List Elements
+* Palindrome Linked List
+* Odd Even Linked List
