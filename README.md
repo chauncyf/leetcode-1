@@ -60,7 +60,8 @@
 * Odd Even Linked List
 
 ## April 23
-* Longest Consecutive Sequence(Union Find)
-* 
-* 
+* Min Stack
+* Implement Queue using Stacks
+* Add Digits
+* Move Zeroes
 
