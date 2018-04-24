@@ -65,3 +65,8 @@
 * Add Digits
 * Move Zeroes
 
+## April 24
+* Excel Sheet Column Number
+* Plus One
+* Find Minimum in Rotated Sorted Array
+

@@ -108,7 +108,7 @@ class MyQueue {
 }
 
 ``` 
-但是这个方法很慢，评论中提到了用两个stack的方法要好很多：
+但是这个方法很慢，评论中提到了用两个stack的方法要好很多。
 
 ### 258. Add Digits
 #### 题目描述
@@ -124,6 +124,7 @@ Could you do it without any loop/recursion in O(1) runtime?
 
 #### 思路
 不看followup内的要求的话，其实很简单。感觉和之前做过的某条差不多。
+
 ``` java
 
     public int addDigits(int num) {
@@ -141,7 +142,7 @@ Could you do it without any loop/recursion in O(1) runtime?
 
 ```
 但是既不用loop也不用recursion，要怎么做呢？
-评论区一位大佬给了一个很快的数学解法congruence formula:
+评论区大佬给了一个很快的数学解法congruence formula:
 The Digital Root of a number is same as the remainder when that number is divided by 9 (and this remainder will always be a single digit).
 例子：
 ```
@@ -211,3 +212,5 @@ Minimize the total number of operations.
     }
 
 ```
+比较了一下另外的循环方式（int i = 0; i < nums.length; i++），好像这种iterator比较慢一点！
+
