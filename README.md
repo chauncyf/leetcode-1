@@ -70,3 +70,8 @@
 * Plus One
 * Find Minimum in Rotated Sorted Array
 
+## April 25
+* Encode and Decode TinyURL
+* Self Dividing Numbers
+* Complex Number Multiplication
+

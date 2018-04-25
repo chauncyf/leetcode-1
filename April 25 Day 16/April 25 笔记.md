@@ -184,9 +184,18 @@ The input strings will not have extra blank.
 The input strings will be given in the form of a+bi, where the integer a and b will both belong to the range of [-100, 100]. And the output should be also in this form.
 
 #### 思路
+就用这个式子啊....感觉这题没啥意思？
 (a+bi)(c+di) = (ac - bd) + (ad+bc)i.
-
 ```java
 
+    public String complexNumberMultiply(String a, String b) {
+        String[] cd = a.split("\\+|i");
+        String[] ef = b.split("\\+|i");
+        int c = Integer.parseInt(cd[0]);
+        int d = Integer.parseInt(cd[1]);
+        int e = Integer.parseInt(ef[0]);
+        int f = Integer.parseInt(ef[1]);
+        return (c*e-d*f) + (d*e+c*f) + "i";
+    }
 
 ```
