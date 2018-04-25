@@ -6,120 +6,187 @@ TinyURL is a URL shortening service where you enter a URL such as https://leetco
 Design the encode and decode methods for the TinyURL service. There is no restriction on how your encode/decode algorithm should work. You just need to ensure that a URL can be encoded to a tiny URL and the tiny URL can be decoded to the original URL.
 
 #### 思路
-循环一下？
+存成键值对，然后查询比对：
 ```java
 
-    public int titleToNumber(String s) {
-        char[] array = s.toCharArray();
-        int count = 0;
-        for(int i = 0; i < array.length; i++){
-            count = count*26 + (array[i]-64);
-        }
-        return count;
+public class Codec {
+
+    HashMap<Integer, String> map = new HashMap<>();
+    int i = 0;
+    // Encodes a URL to a shortened URL.
+    public String encode(String longUrl) {
+        
+        map.put(i, longUrl);
+        int result = i;
+        i++;
+        return "http://tinyurl.com/" + result;
+        
     }
 
+    // Decodes a shortened URL to its original URL.
+    public String decode(String shortUrl) {
+        
+        return map.get(Integer.parseInt(shortUrl.replace("http://tinyurl.com/", "")));
+        
+    }
+}
+
 ```
-不过我看其他人的代码似乎都是写的(array[i]-'A'+1)这样子。
+讨论区有人指出了这种方式的缺陷，我认为比较严重的有：
+1.如果需要多次加密同一个longURL，则会出现重复的键值对，浪费空间
+2.用户可能因为这个规律过于一目了然，而利用这个规律进行一些恶意操作。
+3.只用数字的话，随着url的增多，tinyurl会变得很大。打个比方：6位数字组成的url只有1000000种；6位数字和大小写字母组成的url会有(10+26x2)6=56,800,235,584种。
+参考了这位同学的答案，我又重新编了一个版本：
 
-### 66. Plus One
-#### 题目描述
-
-Given a non-empty array of digits representing a non-negative integer, plus one to the integer.
-
-The digits are stored such that the most significant digit is at the head of the list, and each element in the array contain a single digit.
-
-You may assume the integer does not contain any leading zero, except the number 0 itself.
-
-#### 思路
 ```java
 
-    public int[] plusOne(int[] digits) {
+public class Codec {
+
+    HashMap<String, String> url2code = new HashMap<>();
+    HashMap<String, String> code2url = new HashMap<>();
+    String base = "http://tinyurl.com/";
+
+// encode 
+    public String encode(String longurl){
+        if(url2code.containsKey(longurl)) return base + url2code.get(longurl);
+        String key = generateRandomShortUrl(longurl);
+        while(code2url.containsKey(key)){
+            key = generateRandomShortUrl(longurl);
+        }
+        url2code.put(longurl, key);
+        code2url.put(key, longurl);
+        return base + key;
         
-        int n = digits.length;
-        int[] result;
-        for(int i = n-1; i >= 0; i--){
-            if(digits[i] < 9) {
-                digits[i]++;
-                return digits;
+    }
+
+// decode 
+    public String decode(String shorturl){
+        return code2url.get(shorturl.replace(base,""));
+    }
+
+// generate random short url (length = 6) 
+    public String generateRandomShortUrl(String longurl){
+        String charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567809";
+        StringBuffer shorturl = new StringBuffer();
+        for(int i=0; i<6; i++){
+            shorturl.append(charset.charAt((int)(Math.random()*charset.length())));
+        }
+        return shorturl.toString();
+    }
+}
+
+```
+
+### 728. Self Dividing Numbers
+#### 题目描述
+
+A self-dividing number is a number that is divisible by every digit it contains.
+
+For example, 128 is a self-dividing number because 128 % 1 == 0, 128 % 2 == 0, and 128 % 8 == 0.
+
+Also, a self-dividing number is not allowed to contain the digit zero.
+
+Given a lower and upper number bound, output a list of every possible self dividing number, including the bounds if possible.
+
+Example 1:
+Input: 
+left = 1, right = 22
+Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 22]
+
+#### 思路
+
+就用了很简单粗暴的方法...
+```java
+
+    public List<Integer> selfDividingNumbers(int left, int right) {
+        
+        List<Integer> list = new ArrayList<>();
+
+        for(int i = left; i <= right; i++){
+
+        //默认这个数字是一个self-dividing number
+            boolean result = true;
+            int temp = i;
+
+        //遍历个位以前的每一位，一旦出现违反规则的情况，则让result = false，并且跳出遍历；
+            while(temp/10 != 0){
+                if(temp%10 == 0){
+                    result = false;
+                    break;
+                }
+                int divider = temp%10;
+                if(i%divider != 0){
+                    result = false;
+                    break;
+                }
+                temp = temp / 10;
             }
-            digits[i] = 0;
+
+        //判断个位（数）是否符合要求
+            int divider = temp%10;
+            if(divider == 0) 
+                result = false;
+            else{
+                if(i%divider != 0) 
+                    result = false;
+            }
+
+        //只有当result此时还是true时，在list中增加该数字。
+            if(result == true){
+                list.add(i);
+            }
+            
         }
-//      当所有i都等于9，循环无法通过return digits结束时，运行以下代码：
-        result = new int[n+1];
-        result[0] = 1;
-        return result;
-        
+
+        return list;
+
+    }
+
+```
+但是我这个代码太长啦，看见讨论区有一个版本很好：
+```java
+
+    public List<Integer> selfDividingNumbers(int left, int right) {
+        List<Integer> list = new ArrayList<>();
+        for (int i = left; i <= right; i++) {
+            int j = i;
+            //这里把j是个位数的情况包含进去了
+            //而我是分开写的，使得代码很冗余
+            for (; j > 0; j /= 10) {
+                if ((j % 10 == 0) || (i % (j % 10) != 0)) break;
+            }
+            //这里没有另外存储一个变量进行判断，而是看j能不能走到这一步，减少了空间的使用，也让代码更精简
+            if (j == 0) list.add(i); 
+        }
+        return list;
     }
 
 ```
 
-### 153. Find Minimum in Rotated Sorted Array	
+### 537. Complex Number Multiplication
 #### 题目描述
 
-Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
+Given two strings representing two complex numbers.
 
-(i.e.,  [0,1,2,4,5,6,7] might become  [4,5,6,7,0,1,2]).
+You need to return a string representing their multiplication. Note i2 = -1 according to the definition.
 
-Find the minimum element.
+Example 1:
+Input: "1+1i", "1+1i"
+Output: "0+2i"
+Explanation: (1 + i) * (1 + i) = 1 + i2 + 2 * i = 2i, and you need convert it to the form of 0+2i.
+Example 2:
+Input: "1+-1i", "1+-1i"
+Output: "0+-2i"
+Explanation: (1 - i) * (1 - i) = 1 + i2 - 2 * i = -2i, and you need convert it to the form of 0+-2i.
+Note:
 
-You may assume no duplicate exists in the array.
-
-Example:
-
-Input: [3,4,5,1,2],
-Output: 1
+The input strings will not have extra blank.
+The input strings will be given in the form of a+bi, where the integer a and b will both belong to the range of [-100, 100]. And the output should be also in this form.
 
 #### 思路
-
-先排序，后取第一个【捂脸】尴尬的解法
-```java
-
-    public int findMin(int[] nums) {
-        Arrays.sort(nums);
-        return nums[0];
-    }
-
-```
-java的sort貌似是O(nlogn)的
-或者很蠢的遍历O(n)...
-```java
-
-    public int findMin(int[] nums) {
-        int min = nums[0];
-        for(int i = 1; i < nums.length; i++){
-            if(min > nums[i]) min = nums[i];
-        }
-        return min;
-    }
-
-```
-
-但还有最快的一个方法binary search!(logn)
+(a+bi)(c+di) = (ac - bd) + (ad+bc)i.
 
 ```java
-    
-//  找到中间位置mid，如果nums[mid] < nums[mid - 1]，那么nums[mid]就是最小值；
-//  如果nums[mid] >= nums[start]且nums[mid]  >= nums[end],那么最小值肯定在右半部分，则让start = mid;
-    public int findMin(int[] nums) {
-        
-        if (nums == null || nums.length == 0) return 0;
-        
-        if(nums.length == 1) return nums[0];
-        
-        int start = 0;
-        int end = nums.length - 1;
-        while(start < end){
-            int mid = (start+end)/2;
-            if(mid >= 1 && nums[mid] < nums[mid - 1]) return nums[mid];
-            if(nums[start] <= nums[mid] && nums[mid]  >= nums[end])
-                start = mid + 1;
-            else
-                end = mid -1;
-                
-        }
-        return nums[start];
-    }
+
 
 ```
-
-测试例子里，第一个最慢，第二个第三个差不多哎～
