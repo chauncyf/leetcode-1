@@ -21,7 +21,7 @@
 有事停一天
 
 
-## April 15
+## April 15(12题)
 * Single Number II (Bit Manipulation)
 * Single Number III (Bit Manipulation)
 * Couples Holding Hands(Union Find)
@@ -54,7 +54,7 @@
 * Linked List Components
 * Remove Duplicates from Sorted List
 
-## April 22
+## April 22(18题)
 * Remove Linked List Elements
 * Palindrome Linked List
 * Odd Even Linked List
@@ -74,4 +74,8 @@
 * Encode and Decode TinyURL
 * Self Dividing Numbers
 * Complex Number Multiplication
+
+## April 26
+* Optimal Division
+
 
