@@ -76,6 +76,6 @@
 * Complex Number Multiplication
 
 ## April 26
-* Optimal Division
+* Optimal Division(缺:divide and conquer)
 
 
