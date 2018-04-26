@@ -77,5 +77,6 @@
 
 ## April 26
 * Optimal Division(缺:divide and conquer)
-
+* Integer Break
+* Count Numbers with Unique Digits
 
