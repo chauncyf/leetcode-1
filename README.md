@@ -82,3 +82,7 @@
 
 ## April 27
 * Palindrome Number
+
+## April 28
+* Valid Anagram
+* Merge Intervals
