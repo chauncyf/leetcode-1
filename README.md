@@ -98,3 +98,5 @@
 ## May 1
 * Maximum Gap
 
+## May 2
+* Majority Element
