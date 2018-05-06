@@ -102,10 +102,13 @@
 * Majority Element
 
 ## May 3
-* 签证准备
+* 签证
 
 ## May 4
 * Roman to Integer
 
 ## May 5
 * Max Chunks To Make Sorted
+
+## May 6
+* Pascal's Triangle
