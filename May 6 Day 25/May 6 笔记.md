@@ -1,4 +1,4 @@
-### 13. Roman to Integer
+### 118. Pascal's Triangle
 #### 题目
 Given a non-negative integer numRows, generate the first numRows of Pascal's triangle.
 

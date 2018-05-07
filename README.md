@@ -87,7 +87,7 @@
 * Valid Anagram
 * Merge Intervals
 
-## April 29
+## April 29(19)
 浪了一天:D
 
 ## April 30
@@ -110,5 +110,13 @@
 ## May 5
 * Max Chunks To Make Sorted
 
-## May 6
+## May 6(8)
 * Pascal's Triangle
+
+## May 7
+* Maximum Depth of Binary Tree
+* Invert Binary Tree
+* Same Tree
+* Duplicate Emails
+* Binary Tree Preorder Traversal
+
