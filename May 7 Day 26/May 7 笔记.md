@@ -59,7 +59,7 @@ BFS(Breadth-first search) can be used to traverse or search a tree or a graph. I
 
 ```
 
-DFS: DFS can be used to traverse or search a tree or a graph. It starts at the root and explores as far as possible along each branch before backtracking. DFS often uses two stacks(FILO).(+:push and -:pop in java)
+DFS: DFS can be used to traverse or search a tree or a graph. It starts at the root and explores as far as possible along each branch before backtracking. DFS often uses two stacks(LIFO).(+:push and -:pop in java)
 ``` java
     public int maxDepth(TreeNode root) {
         if(root == null) return 0;

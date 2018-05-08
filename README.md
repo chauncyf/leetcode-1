@@ -87,7 +87,7 @@
 * Valid Anagram
 * Merge Intervals
 
-## April 29(19)
+## April 29(16题)
 浪了一天:D
 
 ## April 30
@@ -110,7 +110,7 @@
 ## May 5
 * Max Chunks To Make Sorted
 
-## May 6(8)
+## May 6(8题)
 * Pascal's Triangle
 
 ## May 7
@@ -120,3 +120,10 @@
 * Duplicate Emails
 * Binary Tree Preorder Traversal
 
+## May 8 
+* Symmetric Tree
+* Binary Tree Level Order Traversal
+* Container With Most Water
+
+## May 9
+ 
