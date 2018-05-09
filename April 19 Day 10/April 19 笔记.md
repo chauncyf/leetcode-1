@@ -10,7 +10,7 @@ Your algorithm should run in O(n) complexity.
 
 #### 思路
 很简单，把current node变成next node;
-``` java
+```java
 
     public void deleteNode(ListNode node) {
         
@@ -29,7 +29,7 @@ A linked list can be reversed either iteratively or recursively. Could you imple
 
 iteratively:
 
-``` java
+```java
 
     public ListNode reverseList(ListNode head) {
         
@@ -88,7 +88,7 @@ Output: 1->1->2->3->4->4
 
 iteratively:
 
-``` java
+```java
 
 public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         
