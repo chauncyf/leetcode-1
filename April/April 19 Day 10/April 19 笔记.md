@@ -56,7 +56,7 @@ iteratively:
 
 recursively（思路基本一样）:
 
-``` java
+```java
 
     public ListNode reverseList(ListNode head) {
         if(head == null) return head;
@@ -89,8 +89,7 @@ Output: 1->1->2->3->4->4
 iteratively:
 
 ```java
-
-public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         
         ListNode temphead = new ListNode(0);
         ListNode current = temphead;
@@ -120,13 +119,11 @@ public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         return temphead.next;
         
     }
-
 ``` 
 
 recursively:
 
 ```java
-
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         
         if(l1 == null) return l2;
@@ -146,6 +143,4 @@ recursively:
         }
         
     }
-
-
 ```

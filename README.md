@@ -20,7 +20,6 @@
 ## April 14
 有事停一天
 
-
 ## April 15(12题)
 * Single Number II (Bit Manipulation)
 * Single Number III (Bit Manipulation)
@@ -131,3 +130,19 @@
 * Valid Parentheses（缺:DP）
 * Swap Nodes in Pairs
 * Combine Two Tables（DB）
+
+## May 10 
+* 69. Sqrt(x)
+* 82. Remove Duplicates from Sorted List II
+* 86. Partition List
+
+## May 11 
+* 
+* 
+* 
+
+## May 12 
+* 
+* 
+* 
+

@@ -1,5 +1,6 @@
 #### 12. Integer to Roman
-### Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
+### Problem
+Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
 
 Symbol       Value
 I             1
@@ -160,7 +161,7 @@ Could you do this in one pass?
     }
 ```
 ### 20. Valid Parentheses
-### Problem
+#### Problem
 Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 
 An input string is valid if:
@@ -189,6 +190,7 @@ Example 5:
 
 Input: "{[]}"
 Output: true
+
 #### Solution
 可以用stack做～时间复杂度n,空间复杂度n
 ```java
