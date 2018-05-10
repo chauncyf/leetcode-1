@@ -119,8 +119,8 @@ Output: 1->2->2->4->3->5
 #### Solution
 分别存在两个linkedlist中，然后把他们相接就好。
 需要注意的是，rightlist.next必须设为null来避免cycle!
-例：
-5->6->1->2, x=3, at last cur2 points to 6, cur1 points to 2, we must set 6->1 to 6->null, otherwise there will be a cycle.
+
+例：5->6->1->2, x=3,最后tempright指向6, templeft指向2, we must set 6->1 to 6->null, otherwise there will be a cycle
 ```java
     public ListNode partition(ListNode head, int x) {
         if(head == null) return null;
