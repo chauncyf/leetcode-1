@@ -1,5 +1,6 @@
 ### 82. Remove Duplicates from Sorted List II
 #### Problem
+```text
 Given a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list.
 
 Example 1:
@@ -10,7 +11,7 @@ Example 2:
 
 Input: 1->1->1->2->3
 Output: 2->3
-
+```
 #### Solution
 我就是顺着逻辑遍历的，具体看代码中的注释。
 ```java
@@ -45,7 +46,7 @@ Output: 2->3
 
 ### 69. Sqrt(x)
 #### Problem
-
+```text
 Implement int sqrt(int x).
 
 Compute and return the square root of x, where x is guaranteed to be a non-negative integer.
@@ -62,10 +63,10 @@ Input: 8
 Output: 2
 Explanation: The square root of 8 is 2.82842..., and since 
              the decimal part is truncated, 2 is returned.
-
+```
 #### Solution
 
-牛顿法：
+可以用计算方法课上学的牛顿法：
 ```java
     //牛顿法：求解f(res) = res^2-x=0这个一元二次方程
     //用y=f(res0)+f'(res0)(res-res0) = '/近似表示f(res)
@@ -105,6 +106,7 @@ the plain binary search 2333:
 ```
 ### 86. Partition List
 #### Problem
+```text
 Given a linked list and a value x, partition it such that all nodes less than x come before nodes greater than or equal to x.
 
 You should preserve the original relative order of the nodes in each of the two partitions.
@@ -113,7 +115,7 @@ Example:
 
 Input: head = 1->4->3->2->5->2, x = 3
 Output: 1->2->2->4->3->5
-
+```
 #### Solution
 分别存在两个linkedlist中，然后把他们相接就好。
 需要注意的是，rightlist.next必须设为null来避免cycle!

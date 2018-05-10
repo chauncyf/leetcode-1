@@ -1,7 +1,7 @@
 ### 118. Pascal's Triangle
 #### 题目
+```text
 Given a non-negative integer numRows, generate the first numRows of Pascal's triangle.
-
 
 In Pascal's triangle, each number is the sum of the two numbers directly above it.
 
@@ -16,13 +16,13 @@ Output:
   [1,3,3,1],
  [1,4,6,4,1]
 ]
- 
+```
 #### 思路
 
 一行行计算即可
 
 一：从后往前算
-``` java
+```java
 
     public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
@@ -36,7 +36,6 @@ Output:
         }
         return result;
     }
-
 ```
 
 二：从前往后算：

@@ -1,7 +1,7 @@
 ### 101. Symmetric Tree
 #### Problem
 Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).
-
+```text
 For example, this binary tree [1,2,2,3,4,4,3] is symmetric:
 
     1
@@ -17,7 +17,7 @@ But the following [1,2,2,null,3,null,3] is not:
    3    3
 Note:
 Bonus points if you could solve it both recursively and iteratively.
-
+```
 #### Solution
 Recursive:
 ```java
@@ -35,7 +35,7 @@ Recursive:
 ```
 
 Iterative:
-``` java
+```java
 
     public boolean isSymmetric(TreeNode root) {
         if(root == null) return true;
@@ -61,9 +61,8 @@ Iterative:
 ```
 但是看了评论区，有人说queue内最好不要插入null，所以要将!queue.isEmpty()改成queue.size>1;或者写成如下的样子：
 
-``` java
+```java
 //Discuss@Scarlett_comeup
-
 public boolean isSymmetric(TreeNode root) {
         if (root == null || root.left == null && root.right == null){
             return true;
@@ -104,6 +103,7 @@ public boolean isSymmetric(TreeNode root) {
 
 ### 102. Binary Tree Level Order Traversal
 #### Problem
+``` text
 Given a binary tree, return the level order traversal of its nodes' values. (ie, from left to right, level by level).
 
 For example:
@@ -119,6 +119,7 @@ return its level order traversal as:
   [9,20],
   [15,7]
 ]
+```
 #### Solution
 显然可以用BFS来做
 ```java
@@ -150,14 +151,15 @@ return its level order traversal as:
 
 ### 11. Container With Most Water
 #### Problem
+``` text
 Given n non-negative integers a1, a2, ..., an, where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.
 
 Note: You may not slant the container and n is at least 2.
-
+```
 #### Solution
 一开始用了brute-force，但是效率太低啦，我们需要一个更聪明的办法：
 先从x最小和最大的两条线段开始，此时的宽度是最大的，如果有容量更大的container，那么它的高度一定高于两者中的最低值：
-``` java
+```java
 
     public int maxArea(int[] height) {
         int result = 0;

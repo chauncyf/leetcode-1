@@ -1,5 +1,6 @@
 ### 104. Maximum Depth of Binary Tree
 #### Problem
+```text
 Given a binary tree, find its maximum depth.
 
 The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
@@ -16,10 +17,10 @@ Given binary tree [3,9,20,null,null,15,7],
    15   7
 
 return its depth = 3.
-
+```
 #### Solution
 Recursive:
-``` java
+```java
 
     public int maxDepth(TreeNode root) {
 
@@ -36,7 +37,7 @@ However, an iterative method is always better than a recursive one in java, acco
 
 BFS:
 BFS(Breadth-first search) can be used to traverse or search a tree or a graph. It starts at the tree root and explores the neighbor nodes first, before moving to the next level of neighbors. BFS usually uses a queue(FIFO).(+:offer and -:poll in java)
-``` java
+```java
 
     public int maxDepth(TreeNode root) {
         if(root == null) return 0;
@@ -60,7 +61,7 @@ BFS(Breadth-first search) can be used to traverse or search a tree or a graph. I
 ```
 
 DFS: DFS can be used to traverse or search a tree or a graph. It starts at the root and explores as far as possible along each branch before backtracking. DFS often uses two stacks(LIFO).(+:push and -:pop in java)
-``` java
+```java
     public int maxDepth(TreeNode root) {
         if(root == null) return 0;
         Stack<TreeNode> stack = new Stack<>();  //initiate
@@ -92,6 +93,7 @@ DFS: DFS can be used to traverse or search a tree or a graph. It starts at the r
 
 ### 226. Invert Binary Tree
 #### Problem
+```text
 Invert a binary tree.
      4
    /   \
@@ -105,7 +107,7 @@ to
   7     2
  / \   / \
 9   6 3   1
-
+```
 #### Solution
 recursive:
 ``` java
@@ -122,7 +124,7 @@ recursive:
 ```
 
 iterative(bfs):
-``` java
+```java
 
     public TreeNode invertTree(TreeNode root) {
         if (root == null) return null;
@@ -148,6 +150,7 @@ iterative(bfs):
 
 ### 100. Same Tree
 #### Problem
+```text
 Given two binary trees, write a function to check if they are the same or not.
 
 Two binary trees are considered the same if they are structurally identical and the nodes have the same value.
@@ -180,10 +183,10 @@ Input:     1         1
         [1,2,1],   [1,1,2]
 
 Output: false
-
+```
 #### Solution
 Recursive:
-``` java 
+```java 
 
     public boolean isSameTree(TreeNode p, TreeNode q) {
         if(p == null && q == null) return true;
@@ -196,7 +199,7 @@ Recursive:
 ```
 
 Iterative:
-``` java
+```java
 
     public boolean isSameTree(TreeNode p, TreeNode q) {
         if(p == null && q == null) return true;
@@ -219,11 +222,11 @@ Iterative:
         }
         return true;    
     }
-
 ```
 
 ### 182. Duplicate Emails
 #### Problem
+```text
 Write a SQL query to find all duplicate emails in a table named Person.
 +----+---------+
 | Id | Email   |
@@ -241,10 +244,9 @@ For example, your query should return the following for the above table:
 +---------+
 
 Note: All emails are in lowercase.
-
+```
 #### Solution
-``` mysql
-
+```mysql
 # Write your MySQL query statement below
 select Email 
 from Person 
@@ -256,6 +258,7 @@ having count(Email) > 1;
 
 ### 144. Binary Tree Preorder Traversal
 #### Problem
+```text
 Given a binary tree, return the preorder traversal of its nodes' values.
 
 Example:
@@ -268,10 +271,10 @@ Input: [1,null,2,3]
 Output: [1,2,3]
 
 Follow up: Recursive solution is trivial, could you do it iteratively?
-
+```
 #### Solution
 DFS:
-``` java
+```java
 
     public List<Integer> preorderTraversal(TreeNode root) {
 
@@ -291,5 +294,4 @@ DFS:
         }
         return result;
     }
-
 ```
