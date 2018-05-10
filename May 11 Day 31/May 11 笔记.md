@@ -1,6 +1,6 @@
 ### 176. Second Highest Salary
 #### Problem
-
+```text
 Write a SQL query to get the second highest salary from the Employee table.
 +----+--------+
 | Id | Salary |
@@ -15,7 +15,7 @@ For example, given the above Employee table, the query should return 200 as the 
 +---------------------+
 | 200                 |
 +---------------------+
-
+```
 #### Solution
 two versions:
 ```mysql
