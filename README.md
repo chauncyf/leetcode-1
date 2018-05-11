@@ -116,7 +116,7 @@
 * Maximum Depth of Binary Tree
 * Invert Binary Tree
 * Same Tree
-* Duplicate Emails（DB）
+* Duplicate Emails (DB)
 * Binary Tree Preorder Traversal
 
 ## May 8 
@@ -127,9 +127,9 @@
 ## May 9
 * Integer to Roman
 * Remove Nth Node From End of List
-* Valid Parentheses（缺:DP）
+* Valid Parentheses (缺:DP)
 * Swap Nodes in Pairs
-* Combine Two Tables（DB）
+* Combine Two Tables (DB)
 
 ## May 10 
 * Remove Duplicates from Sorted List II
@@ -137,9 +137,10 @@
 * Partition List
 
 ## May 11 
-* 
-* 
-* 
+* Second Highest Salary (DB)
+* Add Binary
+* Implement strStr()
+* Longest Common Prefix
 
 ## May 12 
 * 

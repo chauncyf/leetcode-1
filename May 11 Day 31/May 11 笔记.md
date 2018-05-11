@@ -52,7 +52,6 @@ Example 2:
 Input: a = "1010", b = "1011"
 Output: "10101"
 ```
-
 #### Solution
 用carry来代表是否进一位，对每一次计算进行标记，并将carry用于下一位计算。
 到最后，如果carry==0那么代表不需要多一位，否则就需要多进一位。
@@ -75,6 +74,7 @@ public String addBinary(String a, String b) {
 ```
 ### 28. Implement strStr()
 #### Problem
+```text
 Implement strStr().
 
 Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
@@ -92,7 +92,7 @@ Clarification:
 What should we return when needle is an empty string? This is a great question to ask during an interview.
 
 For the purpose of this problem, we will return 0 when needle is an empty string. This is consistent to C's strstr() and Java's indexOf().
-
+```
 #### Solution
 从haystack的index=0开始，分别检查haystack.substring(index, index + needlelength)和needle是否相等
 ```java
@@ -138,3 +138,39 @@ discuss中有一个虽然也是brute-force，但是代码特别简洁漂亮的�
 ```
 反正我肯定是写不出来这样的代码的～厉害！
 
+### 14. Longest Common Prefix
+#### Problem
+```text
+Write a function to find the longest common prefix string amongst an array of strings.
+
+If there is no common prefix, return an empty string "".
+
+Example 1:
+
+Input: ["flower","flow","flight"]
+Output: "fl"
+Example 2:
+
+Input: ["dog","racecar","car"]
+Output: ""
+Explanation: There is no common prefix among the input strings.
+Note:
+
+All given inputs are in lowercase letters a-z.
+
+```
+#### Solution
+思路很简单，但是有个地方需要注意，不能犯错哇。
+```java
+    public String longestCommonPrefix(String[] strs) {
+        if(strs.length == 0 || strs == null) return "";
+        String res = new String();
+        res = strs[0];
+        for(int i = 1; i < strs.length; i++){
+            //注意这里strs[i].indexOf(res) != 0 而不是 != -1就好
+            //因为我们不仅需要它存在，而且需要它在最前面
+            while(strs[i].indexOf(res) != 0) res = res.substring(0, res.length() - 1);
+        }
+        return res.toString();
+    }
+```
