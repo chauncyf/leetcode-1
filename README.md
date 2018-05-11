@@ -132,8 +132,8 @@
 * Combine Two Tables（DB）
 
 ## May 10 
-* Sqrt(x)
 * Remove Duplicates from Sorted List II
+* Sqrt(x)
 * Partition List
 
 ## May 11 
