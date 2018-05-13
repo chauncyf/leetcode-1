@@ -20,7 +20,7 @@
 ## April 14
 有事停一天
 
-## April 15(12题)
+## April 15 (12题)
 * Single Number II (Bit Manipulation)
 * Single Number III (Bit Manipulation)
 * Couples Holding Hands(Union Find)
@@ -53,7 +53,7 @@
 * Linked List Components
 * Remove Duplicates from Sorted List
 
-## April 22(18题)
+## April 22 (18题)
 * Remove Linked List Elements
 * Palindrome Linked List
 * Odd Even Linked List
@@ -86,7 +86,7 @@
 * Valid Anagram
 * Merge Intervals
 
-## April 29(16题)
+## April 29 (16题)
 浪了一天:D
 
 ## April 30
@@ -109,7 +109,7 @@
 ## May 5
 * Max Chunks To Make Sorted
 
-## May 6(8题)
+## May 6 (8题)
 * Pascal's Triangle
 
 ## May 7
@@ -142,8 +142,7 @@
 * Implement strStr()
 * Longest Common Prefix
 
-## May 12 
-* 
-* 
-* 
+## May 12 & 13(22题)
+* Merge Sorted Array
+* First Bad Version
 
