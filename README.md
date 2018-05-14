@@ -146,3 +146,12 @@
 * Merge Sorted Array
 * First Bad Version
 
+## May 14
+* Median of Two Sorted Arrays
+* Pascal's Triangle II
+
+
+
+
+
+
