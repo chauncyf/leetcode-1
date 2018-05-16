@@ -56,7 +56,7 @@ Output: "10101"
 用carry来代表是否进一位，对每一次计算进行标记，并将carry用于下一位计算。
 到最后，如果carry==0那么代表不需要多一位，否则就需要多进一位。
 ```java
-public String addBinary(String a, String b) {
+    public String addBinary(String a, String b) {
         int A = a.length() - 1,
         B = b.length() - 1,
         carry = 0;
