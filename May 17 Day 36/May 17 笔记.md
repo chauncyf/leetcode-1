@@ -17,7 +17,7 @@ Output:
 ]
 ```
 #### Solution
-Backtracking.和sublet题非常像
+Backtracking。和sublet题非常像。
 ```java
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> res = new ArrayList<>();
@@ -41,6 +41,7 @@ Backtracking.和sublet题非常像
         }
     }
 ```
+时间复杂度O(n!)空间复杂度O(n)
 ### 47. Permutations II
 #### Problem
 ```text
@@ -110,7 +111,7 @@ Output:
         }
     }
 ```
-
+时间复杂度O(n!)空间复杂度O(n)
 ### 60. Permutation Sequence
 #### Problem
 ```text
@@ -194,6 +195,7 @@ n = 4, k = 9时，一共24种permutaion，分别可以表示为：
         return res.toString();
     }
 ```
+这样子的时间复杂度只有O(n)而不是原来的O(n!)
 ### 181. Employees Earning More Than Their Managers
 #### Problem
 ```text
