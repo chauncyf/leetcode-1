@@ -139,6 +139,7 @@ Output: "2314"
 ```
 #### Solution
 其实可以按照PermutationsI的办法，全部求出来，然后返回res.get(k-1)。但是这么做太慢了！此处应有更高效的方法。discuss区有大神提供了很棒的思路。展示如下。
+```text
 n = 4, k = 9时，一共24种permutaion，分别可以表示为：
 6 1 + 234的permutations
 6 2 + 134的permutations
@@ -159,6 +160,7 @@ n = 4, k = 9时，一共24种permutaion，分别可以表示为：
 即4
 所以最后的结果应为：
 2 3 1 4
+```
 用这个思路来求解的话，有如下代码：
 ```java
 	public String getPermutation(int n, int k) {
