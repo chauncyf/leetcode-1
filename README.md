@@ -157,5 +157,18 @@
 * Subsets
 * Subsets II
 
+## May 17
+* Permutations
+* Permutations II
+* Permutation Sequence
+* Employees Earning More Than Their Managers(DB)
+
+## May 18
+* 
+* 
+* 
+
+
+
 
 
