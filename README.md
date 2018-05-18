@@ -164,9 +164,8 @@
 * Employees Earning More Than Their Managers(DB)
 
 ## May 18
-* 
-* 
-* 
+* Add Two Numbers
+* Remove Duplicates from Sorted Array
 
 
 
