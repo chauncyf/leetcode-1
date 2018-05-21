@@ -167,7 +167,16 @@
 * Add Two Numbers
 * Remove Duplicates from Sorted Array
 
+## May 19
+* Valid Palindrome
 
+## May 20
+太累了，啥都没干
 
+## May 21
+* Combinations
+* Combination Sum
+* Combination Sum II
+* Customers Who Never Order
 
 
