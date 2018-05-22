@@ -160,7 +160,7 @@
 ## May 17
 * Permutations
 * Permutations II
-* Permutation Sequence
+* Permutation Seqguence
 * Employees Earning More Than Their Managers(DB)
 
 ## May 18
@@ -177,6 +177,10 @@
 * Combinations
 * Combination Sum
 * Combination Sum II
-* Customers Who Never Order
+* Customers Who Never Order  (DB)
 
-
+## May 22
+* Length of Last Word
+* 
+* 
+* 

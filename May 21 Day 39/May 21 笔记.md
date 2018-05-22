@@ -185,6 +185,7 @@ Using the above tables as example, return the following:
 
 ```
 #### Solutions
+
 ```sql
 SELECT a.Name AS Customers
 FROM Customers a
@@ -195,6 +196,7 @@ WHERE a.Id NOT IN(
     ON b.CustomerId = a.Id
 );
 ```
+
 简化一下：
 ```sql
 SELECT Name AS Customers
@@ -204,6 +206,7 @@ WHERE Id NOT IN(
     FROM Orders
 );
 ```
+
 也可以用leftjoin：
 ```sql
 SELECT Name AS Customers 
