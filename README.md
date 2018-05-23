@@ -158,7 +158,7 @@
 * Remove Duplicates from Sorted Array
 * Valid Palindrome
 
-## May 20
+## May 20 (13)
 太累了，啥都没干
 
 ## May 21
