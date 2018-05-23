@@ -94,22 +94,12 @@
 * Largest Number
 * Intersection of Two Arrays
 
-## May 1
+## May 1-6 (8题)
 * Maximum Gap
-
-## May 2
 * Majority Element
-
-## May 3
-* 签证
-
-## May 4
+* 签证神游～
 * Roman to Integer
-
-## May 5
 * Max Chunks To Make Sorted
-
-## May 6 (8题)
 * Pascal's Triangle
 
 ## May 7
@@ -163,11 +153,9 @@
 * Permutation Seqguence
 * Employees Earning More Than Their Managers(DB)
 
-## May 18
+## May 18&19
 * Add Two Numbers
 * Remove Duplicates from Sorted Array
-
-## May 19
 * Valid Palindrome
 
 ## May 20
@@ -179,8 +167,8 @@
 * Combination Sum II
 * Customers Who Never Order  (DB)
 
-## May 22
+## May 22&23
 * Length of Last Word
-* 
-* 
+* Find Peak Element
+* Rising Temperature(DB)
 * 
